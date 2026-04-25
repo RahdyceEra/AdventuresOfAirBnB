@@ -1,4 +1,5 @@
-/* This section styles the page to make it look beautiful */
+/* --- Global Body Styles --- */
+/* Centers everything vertically and horizontally on the page */
 body {
     margin: 0;
     height: 100vh;
@@ -6,29 +7,40 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffe6e6; 
-    /* New background image properties */
+    background-color: #ffe6e6; /* Soft pink background */
+    
+    /* Background image properties (primarily utilized on the memories page) */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transition: background-image 0.5s ease-in-out; /* Smooth transition between photos */
+    transition: background-image 0.5s ease-in-out; /* Smooth fade when switching photos */
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
+/* --- UI Containers --- */
+/* Main card holding the content */
 .container {
-  
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+    backdrop-filter: blur(8px); /* Blurs whatever is behind the container */
+    -webkit-backdrop-filter: blur(8px); /* Safari support for backdrop filter */
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Soft shadow for depth */
     max-width: 500px;
-    width: 80%;
+    width: 80%; /* Responsive width */
 }
 
+/* A slightly more transparent version of the container for the memories page */
+.glass-container {
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* --- Typography --- */
 h1 {
     color: #d6336c; /* Deep pink/red for the header */
     margin-bottom: 20px;
@@ -37,7 +49,7 @@ h1 {
 #message-display {
     font-size: 1.2rem;
     color: #333;
-    min-height: 80px;
+    min-height: 80px; /* Prevents container from collapsing between short/long texts */
     margin-bottom: 30px;
     font-style: italic;
     display: flex;
@@ -45,41 +57,34 @@ h1 {
     justify-content: center;
 }
 
+/* --- Buttons --- */
 button {
     background-color: #d6336c;
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1.1rem;
-    border-radius: 30px;
+    border-radius: 30px; /* Pill shape */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
-    background-color: #a61e4d; /* Darkens slightly when you hover */
+    background-color: #a61e4d; /* Darkens slightly on hover */
 }
 
 button:active {
-    transform: scale(0.95); /* Adds a little "click" animation */
+    transform: scale(0.95); /* Adds a physical "press down" animation effect */
 }
 
-.glass-container {
-    background: rgba(255, 255, 255, 0.6); 
-    backdrop-filter: blur(4px); 
-    -webkit-backdrop-filter: blur(4px);
-
-}
-/* --- Questionnaire Styles --- */
-/* This section only affects the quiz page */
-
+/* --- Questionnaire Specific Styles --- */
 form {
-    text-align: left;
+    text-align: left; /* Left-aligns questions for better readability */
     margin-top: 20px;
 }
 
 .question-block {
-    margin-bottom: 25px;
+    margin-bottom: 25px; /* Spacing between questions */
 }
 
 label {
@@ -89,24 +94,26 @@ label {
     margin-bottom: 10px;
 }
 
+/* Styling for text inputs and textareas */
 input[type="text"], textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid #ffb3c6;
     border-radius: 8px;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
     font-family: inherit;
     font-size: 1rem;
 }
 
 input[type="text"]:focus, textarea:focus {
     outline: none;
-    border-color: #d6336c; /* Highlights the box pink when they type */
+    border-color: #d6336c; /* Highlights the border to a darker pink when typing */
 }
 
+/* Styling for multiple choice options */
 .radio-group {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Spaces out radio buttons horizontally */
 }
 
 .radio-label {
@@ -117,6 +124,7 @@ input[type="text"]:focus, textarea:focus {
     cursor: pointer;
 }
 
+/* --- Navigation Links --- */
 .nav-link {
     display: inline-block;
     margin-top: 20px;
