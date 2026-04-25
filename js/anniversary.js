@@ -6,7 +6,7 @@ const reasons = [
     "Our jokes and times we just talk about the future we want to make togehter.",
     "To you being my #1.",
     "To you being the bestest girlfriend that I can ever ask for.",
-    "Aishiteru, Kekkon kinenbi omedetou 💖"
+    "あいしてる, けっこん きねんび おめでとう 💖"
 ];
 
 // Grab the necessary DOM elements to manipulate later
