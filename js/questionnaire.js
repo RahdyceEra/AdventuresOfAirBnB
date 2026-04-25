@@ -112,7 +112,7 @@ form.addEventListener('submit', function(event) {
     form.style.display = 'none';
     resultMessage.innerHTML = `
         <h2>Aww, you got ${score}/${totalQuestions}! 🎉</h2>
-        <p>But even if you got 0, my favorite thing about you is EVERYTHING.</p>
+        <p>But even if you got 0, I will still love you regardless lol.</p>
         <a href="./index.html?finished=true" class="nav-link">Back to the Reasons</a>
     `;
     resultMessage.style.display = 'block';

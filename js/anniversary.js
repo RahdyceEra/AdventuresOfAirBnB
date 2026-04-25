@@ -15,10 +15,10 @@ const nextLink = document.getElementById('next-page-link');
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('finished') === 'true') {
     // Change this to whatever custom sweet message you want!
-    display.textContent = "I hope you loved the trip down memory lane & and the little quiz! ❤️ Looking forward to making many more memories together and celebrating many more anniversaries! 🎉";
+    display.textContent = "I hope you loved the trip down memory lane & and the little quiz! Too ∞ and beyond ❤️. I love you so much babe. Happy anniversary.";
     
     // Optional: If you want the button to say something different upon returning
-    button.textContent = "Remind me why you love me again"; 
+    button.textContent = "Do you need a reminder of why I love you? Click here!"; 
 }
 
 let currentIndex = 0; 
@@ -32,7 +32,7 @@ button.addEventListener('click', function() {
             currentIndex++;
             button.textContent = "Tell Me Another";
         } else {
-            display.textContent = "And about a million other reasons.";
+            display.textContent = "And so much more ❤️";
             button.style.display = "none"; 
             nextLink.style.display = "inline-block"; 
         }
